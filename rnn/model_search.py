@@ -60,7 +60,7 @@ class RNNModelSearch(RNNModel):
       # weights_data = torch.randn(k, len(PRIMITIVES)).mul_(1e-3) # this will lead to weigths for arch has no grad
       # self.weights = weights_data.cuda()
       
-      self.weight = nn.Parameter(1e-3*torch.randn(k, len(PRIMITIVES)))
+      self.weights = nn.Parameter(1e-3*torch.randn(k, len(PRIMITIVES)))
       
       self._arch_parameters = [self.weights]
       for rnn in self.rnns:
